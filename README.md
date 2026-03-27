@@ -27,6 +27,7 @@ Sesuai dengan instruksi dan modifikasi penyempurnaan skala interaktif, berikut a
 - **Toast Notifications (Alerts)**: Notifikasi pop-up cantik yang memberitahu _User_ secara _real-time_ setiap kali aksi penambahan atau penghapusan kursus berhasil dilakukan.
 - **Drag-to-Scroll Slider (Mouse Swipe)**: Khusus pada barisan kategori layanan _(Services Slider)_, fitur dirancang sangat _mobile-friendly_ dan _desktop-friendly_ yang mana memampukan pengguna untuk menyeret (_drag & swipe_) deretan layanan menggunakan kursor maupun sentuhan (_touch_).
 - **Responsive-First Design**: Media Queries berlapis untuk mendeteksi _Viewport Desktop, Tablet, hingga Mobile Device_. Elemen UI seperti _Stats Banner_, Menu Navigasi, dan Kartu _Course_ secara reaktif beradaptasi dengan layar (seperti _stacking_ kolom otomatis dan _Grid scaling_).
+- **Official Brand Palette Integration**: Redesain UI menggunakan identitas visual resmi Educativa.id, termasuk integrasi _Deep Teal & Navy_ untuk kesan profesional, _Bright Cyan/Teal_ untuk elemen interaktif, serta _Golden Yellow_ untuk _Call to Action_ (CTA) berdaya konversi tinggi. Dilengkapi juga dengan sentuhan _glassmorphism_ dan modernisasi rasio _border-radius_.
 
 ## 🛠️ Teknologi yang Digunakan
 
