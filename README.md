@@ -1,6 +1,6 @@
-# Technical Test - Junior Front End Developer 🚀
+# Task 1 Intern - Redesign Website Educativa 🚀
 
-Proyek ini adalah _submission_ untuk **Technical Test - Junior Front End Developer** pada platform Learning Management System (LMS) ekosistem Educativa.id. Seluruh pengerjaan difokuskan pada manipulasi DOM mentah (_Vanilla_), desain responsif tingkat tinggi, dan _User Experience_ (UX) yang berstandar industri.
+Proyek ini adalah penugasan magang untuk **Tugas 1 (Task 1) - Frontend Developer Intern** pada ekosistem Educativa.id. Seluruh pengerjaan berfokus pada redesign UI/UX (_landing page_) menggunakan identitas visual resmi, manipulasi DOM mentah (_Vanilla_), dan peningkatan desain responsif berskala industri.
 
 ## 📸 Tampilan Hasil Translasi Desain
 

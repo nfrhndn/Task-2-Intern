@@ -107,14 +107,14 @@ button {
 
 .btn-primary {
   background-color: var(--secondary-color);
-  color: var(--primary-navy) !important;
+  color: white !important;
   box-shadow: 0 4px 12px rgba(235, 193, 31, 0.3);
   font-weight: 800;
 }
 
 .btn-primary:hover {
   background-color: var(--secondary-hover);
-  color: var(--primary-navy) !important;
+  color: white !important;
   transform: translateY(-2px);
   box-shadow: 0 6px 15px rgba(215, 168, 2, 0.4);
 }
@@ -209,7 +209,7 @@ button {
 /* Ensure primary button text has correct contrast */
 .nav-menu a.btn-primary,
 .nav-icons a.btn-primary {
-  color: var(--primary-navy) !important;
+  color: white !important;
 }
 
 .nav-icons-wrapper {
@@ -910,81 +910,172 @@ button {
   line-height: 1.6;
 }
 /* -------------------------------------
-   TESTIMONIALS SECTION (Shadcn UI Style)
+   TESTIMONIALS SECTION (Vertical Marquee)
 --------------------------------------- */
 .testimonials-section {
-    padding: 6rem 0;
-    background-color: var(--bg-light);
-}
-
-.testimonials-section .section-header {
-    text-align: center;
-    margin-bottom: 4rem;
-}
-
-.testimonials-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-}
-
-.testimonial-card {
     background-color: white;
-    border: 1px solid var(--border-color); /* Shadcn light border */
-    border-radius: 16px;
-    padding: 2rem;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.02); /* Softer shadow */
-    transition: box-shadow var(--transition-normal);
-    display: flex;
-    flex-direction: column;
+    padding: 6rem 0;
+    overflow: hidden;
+    border-top: 1px solid var(--border-color);
 }
 
-.testimonial-card:hover {
-    box-shadow: 0 4px 12px rgba(0,0,0,0.08); /* Shadcn hover effect */
-}
-
-.testimonial-header {
-    display: flex;
+.testimonials-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3rem;
     align-items: center;
-    gap: 1rem;
-    margin-bottom: 1.5rem;
 }
 
-.testimonial-header .avatar {
-    width: 48px;
-    height: 48px;
-    background-color: var(--primary-navy);
-    color: var(--secondary-color);
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-weight: 700;
-    font-size: 1.2rem;
+@media (min-width: 992px) {
+    .testimonials-container {
+        grid-template-columns: 1fr 1.5fr;
+        gap: 5rem;
+    }
 }
 
-.testimonial-header .info h4 {
-    margin: 0;
-    font-size: 1.1rem;
+.testimonials-left {
     color: var(--text-main);
 }
 
-.testimonial-header .info span {
-    font-size: 0.85rem;
-    color: var(--text-muted);
-}
-
-.testimonial-body {
-    color: var(--text-muted);
-    font-size: 0.95rem;
-    line-height: 1.6;
-    font-style: italic;
-    flex-grow: 1;
+.badge-testimoni {
+    display: inline-block;
+    background-color: rgba(20, 187, 190, 0.1);
+    color: var(--primary-color);
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    font-weight: 700;
     margin-bottom: 1.5rem;
 }
 
-.testimonial-rating {
+.testimoni-title {
+    font-size: 2.5rem;
+    font-weight: 800;
+    line-height: 1.3;
+    margin-bottom: 2rem;
+    color: var(--primary-navy);
+}
+
+/* Revert btn primary to standard gold for light background */
+.testimonials-left .btn-primary {
+    background-color: var(--secondary-color) !important;
+    color: white !important;
+    box-shadow: 0 4px 10px rgba(235, 193, 31, 0.3) !important;
+}
+
+.testimonials-left .btn-primary:hover {
+    background-color: var(--secondary-hover) !important;
+}
+
+.testimonials-right {
+    display: flex;
+    gap: 1.5rem;
+    height: 600px;
+    overflow: hidden;
+    position: relative;
+    /* CSS Mask for fading out top and bottom */
+    mask-image: linear-gradient(to bottom, transparent, black 10%, black 90%, transparent);
+    -webkit-mask-image: linear-gradient(to bottom, transparent, black 10%, black 90%, transparent);
+}
+
+.vertical-marquee {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.v-marquee-track {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 10px 0;
+}
+
+.marquee-up .v-marquee-track {
+    animation: scrollVerticalUp 30s linear infinite;
+}
+
+.marquee-down .v-marquee-track {
+    animation: scrollVerticalDown 30s linear infinite;
+}
+
+@keyframes scrollVerticalUp {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(calc(-50% - 0.75rem)); }
+}
+
+@keyframes scrollVerticalDown {
+    0% { transform: translateY(calc(-50% - 0.75rem)); }
+    100% { transform: translateY(0); }
+}
+
+.review-card {
+    background-color: white;
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    padding: 2rem;
+    color: var(--text-main);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.04);
+}
+
+.review-stars {
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+}
+
+.review-card h4 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: var(--primary-navy);
+}
+
+.review-card p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.review-user {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.review-user .avatar {
+    width: 40px;
+    height: 40px;
+    background-color: var(--primary-navy);
+    color: var(--primary-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    font-weight: 800;
     font-size: 0.9rem;
+}
+
+.review-user h5 {
+    color: var(--text-main);
+    font-size: 0.95rem;
+    margin-bottom: 0.1rem;
+}
+
+.review-user span {
+    color: var(--text-muted);
+    font-size: 0.8rem;
+}
+
+@media (max-width: 768px) {
+    .testimoni-title {
+        font-size: 2rem;
+    }
+    .testimonials-right {
+        height: 500px;
+    }
 }
 
 /* -------------------------------------
@@ -1341,7 +1432,7 @@ button {
 }
 
 .brand-col p {
-  color: var(--text-muted);
+  color: white;
   font-size: 0.95rem;
   line-height: 1.6;
   margin-bottom: 1.5rem;
@@ -1425,7 +1516,7 @@ button {
   text-align: center;
   padding-top: 2rem;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
-  color: #94a3b8;
+  color: white;
   font-size: 0.9rem;
 }
 
@@ -1795,6 +1886,92 @@ button {
 .kr-btn-ambil:hover {
   background-color: var(--primary-color);
   color: white;
+}
+
+/* -------------------------------------
+   CLIENTS & PARTNERS LOGO SLIDER
+--------------------------------------- */
+.clients-section {
+  padding: 4rem 0 3rem;
+  background-color: var(--bg-main);
+  overflow: hidden;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.clients-title {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: var(--primary-navy);
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.clients-subtitle {
+  color: var(--text-muted);
+  font-size: 1rem;
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+.marquee-container {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+/* Gradient fades on the sides of the slider */
+.marquee-container::before,
+.marquee-container::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 150px;
+  height: 100%;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.marquee-container::before {
+  left: 0;
+  background: linear-gradient(to right, white 0%, transparent 100%);
+}
+
+.marquee-container::after {
+  right: 0;
+  background: linear-gradient(to left, white 0%, transparent 100%);
+}
+
+.marquee-track {
+  display: flex;
+  gap: 4rem;
+  animation: scrollMarquee 20s linear infinite;
+  align-items: center;
+  width: max-content;
+}
+
+.marquee-track img {
+  height: 60px; /* Base logo height */
+  width: auto;
+  object-fit: contain;
+  filter: grayscale(100%) opacity(60%);
+  transition: all var(--transition-normal);
+}
+
+.marquee-track img:hover {
+  filter: grayscale(0%) opacity(100%);
+  transform: scale(1.1);
+}
+
+@keyframes scrollMarquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    /* Translate by exactly half since it contains duplicate sets */
+    transform: translateX(calc(-50% - 2rem));
+  }
 }
 
 /* -------------------------------------
