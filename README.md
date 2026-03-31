@@ -1,5 +1,7 @@
 # Task 1 Intern - Redesign Website Educativa 🚀
 
+🌐 **Live Demo Website:** [🚀 Lihat Hasil Deployment di Sini (GitHub Pages)!](https://nfrhndn.github.io/Task-2-Intern/)
+
 Proyek ini adalah penugasan magang untuk **Tugas 1 (Task 1) - Frontend Developer Intern** pada ekosistem Educativa.id. Seluruh pengerjaan berfokus pada redesign UI/UX (_landing page_) menggunakan identitas visual resmi, manipulasi DOM mentah (_Vanilla_), dan peningkatan desain responsif berskala industri.
 
 ## 📸 Tampilan Hasil Translasi Desain
@@ -20,14 +22,16 @@ Proyek ini adalah penugasan magang untuk **Tugas 1 (Task 1) - Frontend Developer
 
 ## ✨ Fitur-Fitur Utama
 
-Sesuai dengan instruksi dan modifikasi penyempurnaan skala interaktif, berikut adalah fitur-fitur yang telah disematkan:
+Sesuai dengan instruksi dan modifikasi penyempurnaan skala interaktif terkini, berikut adalah fitur-fitur yang telah disematkan di dalam proyek:
 
-- **Interactive Navbar & Burger Menu**: Navigasi responsif dengan dukungan _Smooth Scroll_ antar seksi (`#home`, `#courses`, `#contact`), dilengkapi efek _ScrollSpy_ yang secara otomatis menyorot menu navigasi aktif sesuai halaman yang sedang dilihat.
-- **Dynamic _Cart_ & _Wishlist_ Modal**: Sistem keranjang belanja dan _wishlist_ yang dirender secara dinamis. Pengguna dapat menambah kelas, melihat _dropdown_ di dalam _Navbar_, dan menghapus _item_ pilihan dengan mudah melalui tombol `Trash` / `Broken Heart`.
-- **Toast Notifications (Alerts)**: Notifikasi pop-up cantik yang memberitahu _User_ secara _real-time_ setiap kali aksi penambahan atau penghapusan kursus berhasil dilakukan.
-- **Drag-to-Scroll Slider (Mouse Swipe)**: Khusus pada barisan kategori layanan _(Services Slider)_, fitur dirancang sangat _mobile-friendly_ dan _desktop-friendly_ yang mana memampukan pengguna untuk menyeret (_drag & swipe_) deretan layanan menggunakan kursor maupun sentuhan (_touch_).
-- **Responsive-First Design**: Media Queries berlapis untuk mendeteksi _Viewport Desktop, Tablet, hingga Mobile Device_. Elemen UI seperti _Stats Banner_, Menu Navigasi, dan Kartu _Course_ secara reaktif beradaptasi dengan layar (seperti _stacking_ kolom otomatis dan _Grid scaling_).
-- **Official Brand Palette Integration**: Redesain UI menggunakan identitas visual resmi Educativa.id, termasuk integrasi _Deep Teal & Navy_ untuk kesan profesional, _Bright Cyan/Teal_ untuk elemen interaktif, serta _Golden Yellow_ untuk _Call to Action_ (CTA) berdaya konversi tinggi. Dilengkapi juga dengan sentuhan _glassmorphism_ dan modernisasi rasio _border-radius_.
+- **Halaman Karir & Filter Real-Time**: Laman sekunder (`karir.html`) yang didedikasikan untuk menjabarkan daftar rekrutmen talenta, dilengkapi tata letak *Grid Cards* dan fungsionalitas *Radio Button Custom* berskripta murni penyaring posisi pekerjaan antar Divisi secara instan (*live filtering*).
+- **Pop-Up UI Autentikasi Modern**: Fasad layar berlapis *glassmorphism* untuk proses _Login_ dan _Register_ berawal dari klik tombol **Masuk** dari Navigasi. Menampilkan pergantian dinamis tab (*smooth switch-tab*) tanpa reload komponen dan detektor *click outside to close*.
+- **Drag-to-Scroll Slider Custom Cursor**: Khusus di baris-baris *slider* (seperti tab Layanan / Mentor), sistem dirancang kebal _text-highlighting blocking_ dan bisa langsung diseret memakai _mouse_ di perangkat Desktop - visual ini digayakan lebih *fluid* berkat injeksi Kursor Tangan Hitam/Putih *SVG Custom*.
+- **Layout Struktur Premium (*Color Blocks Boundary*)**: Redesain tata letak yang menggunakan metode blok seling warna (*Navy/Deep Teal* pada area *Dukungan Software / Hero*) sebagai jembatan *color break* pemisah secara dinamis di antara seksi berwarna putih, meningkatkan pancingan indra penglihatan.
+- **Infinite Animasi Marquee Horizontal & Vertikal**: Daftar ratusan logo *Client Partnership* maupun bilik *Testimonials* berjalan berurutan tiada henti menyelimuti ruang mempresentasikan portofolio reputasional situs dengan teknik standar korporasi atas.
+- **Interactive Kelas Riset Modal**: Mengimplementasikan arsitektur _Pop Up Full-Screen_ memamerkan koleksi _Course Database_ komprehensif (fitur pencarian real time / Filter tag all) dengan notifikasi _Toast Alert_ ketika menyentuh keranjang.
+- **Responsive-First UI/UX Engineering**: Kode _Media Queries_ optimal yang mendeteksi ketat perubahan ukuran *Viewport* piranti (*Mobile, Tablet/iPad, Layar 1080p Desktop*), mengompakkan proporsi bingkai dari *Flex/Grid*, hingga menetrionalkan jarak elemen.
+- **Official Brand Palette Integration**: Adaptasi identitas korporat penuh (_Teal/Cyan_ khas logo Educativa dipadu warna senada aksen mentega _Golden Yellow_ _Call-to-Action_) lengkap dengan standardisasi UI *border-radius 16px-24px* ala *Start-Up Tech* masa depan.
 
 ## 🛠️ Teknologi yang Digunakan
 

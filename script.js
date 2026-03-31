@@ -779,7 +779,9 @@ document.addEventListener('click', (e) => {
     if (modal && e.target === modal) {
         closeAuthModal();
     }
-});/**
+});
+
+/**
  * Kelas Riset Modal Logic
  */
 function openKelasRisetModal(serviceTitle) {
@@ -998,5 +1000,72 @@ document.addEventListener('DOMContentLoaded', () => {
                 mentorSlider.scrollTo({ left: 0, behavior: 'smooth' });
             });
         });
+    }
+});
+
+/**
+ * Career Page Filter Logic
+ */
+document.addEventListener('DOMContentLoaded', () => {
+    const divisionRadios = document.querySelectorAll('input[name="division"]');
+    const jobCards = document.querySelectorAll('.job-card');
+    const categorySelect = document.getElementById('job-category-filter');
+
+    if (jobCards.length > 0) {
+        function filterJobs() {
+            const selectedDivision = document.querySelector('input[name="division"]:checked')?.value || 'All';
+            const selectedCategory = categorySelect ? categorySelect.value : 'All';
+
+            let visibleCount = 0;
+
+            jobCards.forEach(card => {
+                const cardDivision = card.getAttribute('data-division');
+                const cardCategory = card.getAttribute('data-category');
+
+                const matchDivision = (selectedDivision === 'All' || cardDivision === selectedDivision);
+                const matchCategory = (selectedCategory === 'All' || cardCategory === selectedCategory);
+
+                if (matchDivision && matchCategory) {
+                    card.style.display = 'flex';
+                    // Small animation reset
+                    card.style.animation = 'none';
+                    card.offsetHeight; /* trigger reflow */
+                    card.style.animation = 'fadeIn 0.4s ease forwards';
+                    visibleCount++;
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+
+            // Handle empty state
+            let emptyState = document.getElementById('empty-career-state');
+            if (visibleCount === 0) {
+                if (!emptyState) {
+                    emptyState = document.createElement('div');
+                    emptyState.id = 'empty-career-state';
+                    emptyState.style.gridColumn = '1 / -1';
+                    emptyState.style.textAlign = 'center';
+                    emptyState.style.padding = '4rem 2rem';
+                    emptyState.style.backgroundColor = 'white';
+                    emptyState.style.borderRadius = '16px';
+                    emptyState.style.border = '1px solid var(--border-color)';
+                    emptyState.innerHTML = '<i class="fas fa-search" style="font-size: 3rem; color: #cbd5e1; margin-bottom: 1rem;"></i><h3 style="color: var(--primary-navy); font-weight: 800; font-size: 1.25rem;">Belum ada lowongan</h3><p class="text-muted">Maaf, belum ada posisi untuk filter terkait. Silakan cari divisi lain.</p>';
+                    document.getElementById('career-jobs-container').appendChild(emptyState);
+                }
+                emptyState.style.display = 'block';
+            } else if (emptyState) {
+                emptyState.style.display = 'none';
+            }
+        }
+
+        if (divisionRadios.length > 0) {
+            divisionRadios.forEach(radio => {
+                radio.addEventListener('change', filterJobs);
+            });
+        }
+
+        if (categorySelect) {
+            categorySelect.addEventListener('change', filterJobs);
+        }
     }
 });

@@ -1,0 +1,382 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Karir - Educativa.id</title>
+  <!-- Google Fonts: Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <!-- FontAwesome for Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- NAVBAR -->
+  <nav class="navbar" id="navbar">
+    <div class="container navbar-container">
+      <div class="nav-logo">
+        <a href="index.html">
+          <img src="assets/Logo-Educativa.png" alt="Educativa Logo" style="height: 40px;">
+        </a>
+      </div>
+
+      <!-- Mobile Menu Toggle -->
+      <button class="nav-toggle" id="nav-toggle">
+        <i class="fas fa-bars"></i>
+      </button>
+
+      <ul class="nav-menu" id="nav-menu">
+        <li><a href="index.html#home">Home</a></li>
+        <li><a href="index.html#courses">Layanan</a></li>
+        <li><a href="index.html#about">Tentang Kami</a></li>
+        <li><a href="karir.html" class="active">Karir</a></li>
+        <li><a href="index.html#contact">Kontak Kami</a></li>
+        <li class="nav-icons-wrapper">
+          <div class="nav-icons">
+            <button class="btn btn-primary btn-pill btn-sm" onclick="openAuthModal()" style="font-weight: 600; padding: 0.5rem 1.2rem;">Masuk</button>
+            <div class="icon-wrapper" onclick="toggleNavDropdown('wishlist-dropdown')">
+              <i class="fa-regular fa-heart"></i>
+              <span class="badge" id="wishlist-badge">0</span>
+              <!-- Wishlist Dropdown -->
+              <div class="nav-dropdown" id="wishlist-dropdown">
+                <div class="dropdown-header">
+                  <h4>Wishlist Saya</h4>
+                </div>
+                <div class="dropdown-body" id="wishlist-items-container">
+                  <p class="empty-notif">Belum ada kelas di wishlist.</p>
+                </div>
+              </div>
+            </div>
+            <div class="icon-wrapper" onclick="toggleNavDropdown('cart-dropdown')">
+              <i class="fa-solid fa-cart-shopping"></i>
+              <span class="badge" id="cart-badge">0</span>
+              <!-- Cart Dropdown -->
+              <div class="nav-dropdown" id="cart-dropdown">
+                <div class="dropdown-header">
+                  <h4>Keranjang Belanja</h4>
+                </div>
+                <div class="dropdown-body" id="cart-items-container">
+                  <p class="empty-notif">Keranjang Anda kosong.</p>
+                </div>
+                <div class="dropdown-footer">
+                  <button class="btn btn-primary" style="width: 100%; border-radius: 8px;" onclick="alert('Checkout fitur belum tersedia di demo ini.')">Lanjut Pembayaran</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- CAREER HERO -->
+  <section class="career-hero">
+    <div class="container">
+      <h1>Bergabung Bersama Kami</h1>
+      <p>Jelajahi karir terbaik di Educativa.id dan jadilah bagian dari perubahan wajah pendidikan riset di Indonesia.</p>
+    </div>
+  </section>
+
+  <!-- CAREER MAIN CONTENT -->
+  <section class="career-section">
+    <div class="container career-layout">
+      <!-- SIDEBAR FILTER -->
+      <aside class="career-sidebar">
+        <!-- Job Category -->
+        <div class="filter-group">
+          <div class="filter-title">
+            <i class="fas fa-tags"></i> Job Category
+          </div>
+          <div class="custom-select-wrapper">
+            <select id="job-category-filter">
+              <option value="All">All Categories</option>
+              <option value="Full-Time">Full-Time</option>
+              <option value="Part-Time">Part-Time</option>
+              <option value="Freelance">Freelance</option>
+              <option value="Internship">Internship</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Division -->
+        <div class="filter-group mt-4">
+          <div class="filter-title">
+            <i class="far fa-building"></i> Division
+          </div>
+          <form id="division-filter-form" class="radio-filter-list">
+            <label class="radio-item">
+              <input type="radio" name="division" value="All" checked>
+              <span class="radio-circle"></span>
+              All Divisions
+            </label>
+            <label class="radio-item">
+              <input type="radio" name="division" value="Sales">
+              <span class="radio-circle"></span>
+              Sales & Customer Service
+            </label>
+            <label class="radio-item">
+              <input type="radio" name="division" value="Creative">
+              <span class="radio-circle"></span>
+              Creative
+            </label>
+            <label class="radio-item">
+              <input type="radio" name="division" value="Business Development">
+              <span class="radio-circle"></span>
+              Business Development
+            </label>
+            <label class="radio-item">
+              <input type="radio" name="division" value="IT">
+              <span class="radio-circle"></span>
+              Information Technology
+            </label>
+            <label class="radio-item">
+              <input type="radio" name="division" value="Business Administration">
+              <span class="radio-circle"></span>
+              Business Administration
+            </label>
+            <label class="radio-item">
+              <input type="radio" name="division" value="Marketing">
+              <span class="radio-circle"></span>
+              Marketing
+            </label>
+            <label class="radio-item">
+              <input type="radio" name="division" value="Consultant">
+              <span class="radio-circle"></span>
+              Consultant
+            </label>
+            <label class="radio-item">
+              <input type="radio" name="division" value="Operasional">
+              <span class="radio-circle"></span>
+              Divisi Operasional
+            </label>
+          </form>
+        </div>
+      </aside>
+
+      <!-- JOB LISTING -->
+      <div class="career-grid" id="career-jobs-container">
+        
+        <div class="job-card" data-division="Sales" data-category="Full-Time">
+          <div class="job-header">
+            <h3>Client Relations Executive</h3>
+            <span class="job-type-badge text-teal-bg">Full-Time</span>
+          </div>
+          <p class="job-division text-muted"><i class="far fa-building"></i> Sales & Customer Service</p>
+          <p class="job-desc">Menjalin dan menjaga hubungan baik dengan customer serta mengelola berbagai pipeline konsultasi.</p>
+          <div class="job-footer">
+            <span class="job-location"><i class="fas fa-map-marker-alt"></i> Yogyakarta (Hybrid)</span>
+            <button class="btn btn-outline btn-sm" style="padding: 0.4rem 0.8rem; border-radius: 8px;">Lihat Detail <i class="fas fa-arrow-right"></i></button>
+          </div>
+        </div>
+
+        <div class="job-card" data-division="Creative" data-category="Full-Time">
+          <div class="job-header">
+            <h3>UI/UX Designer</h3>
+            <span class="job-type-badge text-teal-bg">Full-Time</span>
+          </div>
+          <p class="job-division text-muted"><i class="far fa-building"></i> Creative</p>
+          <p class="job-desc">Mendesain antarmuka platform riset dan mengatur pengalaman pengguna interaktif dalam aplikasi web.</p>
+          <div class="job-footer">
+            <span class="job-location"><i class="fas fa-map-marker-alt"></i> Yogyakarta / Remote</span>
+            <button class="btn btn-outline btn-sm" style="padding: 0.4rem 0.8rem; border-radius: 8px;">Lihat Detail <i class="fas fa-arrow-right"></i></button>
+          </div>
+        </div>
+
+        <div class="job-card" data-division="Business Development" data-category="Full-Time">
+          <div class="job-header">
+            <h3>Business Development Associate</h3>
+            <span class="job-type-badge text-teal-bg">Full-Time</span>
+          </div>
+          <p class="job-division text-muted"><i class="far fa-building"></i> Business Development</p>
+          <p class="job-desc">Riset pasar untuk produk edukasi baru dan inisiasi mitra atau ekspansi layanan akademis kita.</p>
+          <div class="job-footer">
+            <span class="job-location"><i class="fas fa-map-marker-alt"></i> Yogyakarta</span>
+            <button class="btn btn-outline btn-sm" style="padding: 0.4rem 0.8rem; border-radius: 8px;">Lihat Detail <i class="fas fa-arrow-right"></i></button>
+          </div>
+        </div>
+
+        <div class="job-card" data-division="IT" data-category="Full-Time">
+          <div class="job-header">
+            <h3>Front-End Web Developer</h3>
+            <span class="job-type-badge text-teal-bg">Full-Time</span>
+          </div>
+          <p class="job-division text-muted"><i class="far fa-building"></i> Information Technology</p>
+          <p class="job-desc">Implementasikan antarmuka interaktif yang brilian dengan teknologi terkini web, membuat animasi dan optimasi UI.</p>
+          <div class="job-footer">
+            <span class="job-location"><i class="fas fa-map-marker-alt"></i> Remote Options</span>
+            <button class="btn btn-outline btn-sm" style="padding: 0.4rem 0.8rem; border-radius: 8px;">Lihat Detail <i class="fas fa-arrow-right"></i></button>
+          </div>
+        </div>
+
+        <div class="job-card" data-division="Business Administration" data-category="Internship">
+          <div class="job-header">
+            <h3>Administration Staff</h3>
+            <span class="job-type-badge text-yellow-bg">Internship</span>
+          </div>
+          <p class="job-division text-muted"><i class="far fa-building"></i> Business Administration</p>
+          <p class="job-desc">Menangani administrasi bisnis, pendataan proyek akademis, serta memantau SOP internal perusahaan.</p>
+          <div class="job-footer">
+            <span class="job-location"><i class="fas fa-map-marker-alt"></i> Yogyakarta</span>
+            <button class="btn btn-outline btn-sm" style="padding: 0.4rem 0.8rem; border-radius: 8px;">Lihat Detail <i class="fas fa-arrow-right"></i></button>
+          </div>
+        </div>
+
+        <div class="job-card" data-division="Marketing" data-category="Full-Time">
+          <div class="job-header">
+            <h3>Social Media Specialist</h3>
+            <span class="job-type-badge text-teal-bg">Full-Time</span>
+          </div>
+          <p class="job-division text-muted"><i class="far fa-building"></i> Marketing</p>
+          <p class="job-desc">Kembangkan saluran media sosial dan rangkul puluhan ribu akademisi dengan konten yang menawan.</p>
+          <div class="job-footer">
+            <span class="job-location"><i class="fas fa-map-marker-alt"></i> Yogyakarta</span>
+            <button class="btn btn-outline btn-sm" style="padding: 0.4rem 0.8rem; border-radius: 8px;">Lihat Detail <i class="fas fa-arrow-right"></i></button>
+          </div>
+        </div>
+
+        <div class="job-card" data-division="Consultant" data-category="Freelance">
+          <div class="job-header">
+            <h3>Academic Research Consultant</h3>
+            <span class="job-type-badge text-blue-bg">Freelance</span>
+          </div>
+          <p class="job-division text-muted"><i class="far fa-building"></i> Consultant</p>
+          <p class="job-desc">Membimbing mahasiswa dalam pengolahan data menggunakan metode penelitian standar berskala internasional.</p>
+          <div class="job-footer">
+            <span class="job-location"><i class="fas fa-map-marker-alt"></i> 100% Remote</span>
+            <button class="btn btn-outline btn-sm" style="padding: 0.4rem 0.8rem; border-radius: 8px;">Lihat Detail <i class="fas fa-arrow-right"></i></button>
+          </div>
+        </div>
+
+        <div class="job-card" data-division="Operasional" data-category="Full-Time">
+          <div class="job-header">
+            <h3>Operations Supervisor</h3>
+            <span class="job-type-badge text-teal-bg">Full-Time</span>
+          </div>
+          <p class="job-division text-muted"><i class="far fa-building"></i> Divisi Operasional</p>
+          <p class="job-desc">Mengawasi alur *project timeline* harian antara klien akademisi dan para konsultan internal Educativa.</p>
+          <div class="job-footer">
+            <span class="job-location"><i class="fas fa-map-marker-alt"></i> Yogyakarta</span>
+            <button class="btn btn-outline btn-sm" style="padding: 0.4rem 0.8rem; border-radius: 8px;">Lihat Detail <i class="fas fa-arrow-right"></i></button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer" id="contact">
+      <div class="container footer-container">
+          <div class="footer-col brand-col">
+              <a href="index.html" class="footer-logo">
+                  <img src="assets/Logo-Educativa.png" alt="Educativa Logo" style="height: 40px; margin-bottom: 1rem; filter: brightness(0) invert(1);">
+              </a>
+              <p>Platform layanan bimbingan KTI, Skripsi, Tesis, Disertasi, Olah Data Statistika & Jurnal Publikasi Berkualitas Berbasis Start-Up Nomor 1 di Indonesia.</p>
+              <div class="social-links">
+                  <a href="#"><i class="fab fa-instagram"></i></a>
+                  <a href="#"><i class="fab fa-tiktok"></i></a>
+                  <a href="#"><i class="fab fa-youtube"></i></a>
+                  <a href="#"><i class="fab fa-linkedin-in"></i></a>
+              </div>
+          </div>
+          
+          <div class="footer-col">
+              <h4>Layanan Kami</h4>
+              <ul>
+                  <li><a href="index.html#courses">Bimbingan Skripsi</a></li>
+                  <li><a href="index.html#courses">Bimbingan Tesis</a></li>
+                  <li><a href="index.html#courses">Olah Data Statistik</a></li>
+                  <li><a href="index.html#courses">Publikasi Jurnal SINTA</a></li>
+                  <li><a href="index.html#courses">Publikasi Scopus</a></li>
+              </ul>
+          </div>
+
+          <div class="footer-col">
+              <h4>Perusahaan</h4>
+              <ul>
+                  <li><a href="index.html#about">Tentang Kami</a></li>
+                  <li><a href="karir.html">Karir</a></li>
+                  <li><a href="#">Testimoni</a></li>
+                  <li><a href="#">Syarat & Ketentuan</a></li>
+                  <li><a href="#">Kebijakan Privasi</a></li>
+              </ul>
+          </div>
+
+          <div class="footer-col contact-col">
+              <h4>Hubungi Kami</h4>
+              <p><i class="fas fa-map-marker-alt"></i> Jl. Raya Berbah, RT.20/RW.29, Karang Bendo, Banguntapan, Kabupaten Bantul, DIY 55198</p>
+              <p><i class="fas fa-envelope"></i> admin@educativa.id</p>
+              <p><i class="fab fa-whatsapp"></i> 6287785330349</p>
+          </div>
+      </div>
+      <div class="footer-bottom">
+          <p>&copy; 2026 PT Educativa Indonesia. All rights reserved.</p>
+      </div>
+  </footer>
+
+  <!-- TOAST CONTAINER -->
+  <div id="toast-container" class="toast-container"></div>
+
+  <!-- AUTH MODAL (LOGIN & REGISTER) -->
+  <div class="auth-modal-overlay" id="auth-modal" style="display: none;">
+    <div class="auth-card">
+      <button class="auth-close-btn" onclick="closeAuthModal()" aria-label="Tutup">
+        <i class="fas fa-times"></i>
+      </button>
+      
+      <div class="auth-header text-center">
+        <img src="assets/Logo-Educativa.png" alt="Educativa Logo" class="auth-logo">
+        <h2>Selamat Datang!</h2>
+        <p>Silakan masuk atau daftar untuk melanjutkan.</p>
+      </div>
+
+      <div class="auth-tabs">
+        <button class="auth-tab-btn active" id="tab-login" onclick="switchAuthTab('login')">Masuk</button>
+        <button class="auth-tab-btn" id="tab-register" onclick="switchAuthTab('register')">Daftar</button>
+      </div>
+
+      <!-- FORM LOGIN -->
+      <form class="auth-form" id="form-login" onsubmit="event.preventDefault(); alert('Login berhasil (Demo)!'); closeAuthModal();">
+        <div class="form-group">
+          <label for="login-email">Email</label>
+          <input type="email" id="login-email" placeholder="Masukkan email Anda" required>
+        </div>
+        <div class="form-group">
+          <label for="login-password">Password</label>
+          <input type="password" id="login-password" placeholder="Masukkan password" required>
+        </div>
+        <div class="form-options">
+          <label class="remember-me">
+            <input type="checkbox"> Ingat saya
+          </label>
+          <a href="#" class="forgot-password">Lupa Password?</a>
+        </div>
+        <button type="submit" class="btn btn-primary" style="width: 100%; border-radius: 999px; font-weight: 700; padding: 0.8rem;">Masuk Sekarang</button>
+      </form>
+
+      <!-- FORM DAFTAR -->
+      <form class="auth-form" id="form-register" style="display: none;" onsubmit="event.preventDefault(); alert('Pendaftaran berhasil (Demo)! Silakan login.'); switchAuthTab('login');">
+        <div class="form-group">
+          <label for="reg-name">Nama Lengkap</label>
+          <input type="text" id="reg-name" placeholder="John Doe" required>
+        </div>
+        <div class="form-group">
+          <label for="reg-email">Email</label>
+          <input type="email" id="reg-email" placeholder="johndoe@email.com" required>
+        </div>
+        <div class="form-group">
+          <label for="reg-password">Password</label>
+          <input type="password" id="reg-password" placeholder="Buat password baru" minlength="6" required>
+        </div>
+        <button type="submit" class="btn btn-primary" style="width: 100%; border-radius: 999px; font-weight: 700; padding: 0.8rem;">Daftar Akun</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- MAIN SCRIPT -->
+  <script src="script.js"></script>
+</body>
+</html>
