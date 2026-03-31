@@ -579,7 +579,7 @@ function renderServicesSlider() {
           </ul>
       </div>
       <div class="service-footer course-actions" style="justify-content: center;">
-          <button class="btn-outline btn-pill" style="width: 100%; padding: 0.8rem; font-weight: 600; color: var(--primary-color); border-color: var(--primary-color);" onclick="openKelasRisetModal('${service.title}')">
+          <button class="service-card-btn" onclick="openKelasRisetModal('${service.title}')">
               Lihat Detail <i class="fas fa-arrow-right" style="margin-left: 0.5rem;"></i>
           </button>
       </div>
@@ -728,6 +728,58 @@ document.addEventListener('click', (e) => {
 });
 
 /**
+ * Authentication Modal Logic (Login / Register)
+ */
+function openAuthModal() {
+    const modal = document.getElementById('auth-modal');
+    if (modal) {
+        modal.style.display = 'flex';
+        // Allow tiny delay to trigger CSS transition
+        setTimeout(() => {
+            modal.classList.add('show');
+        }, 10);
+        
+        // Ensure Login tab is active by default
+        switchAuthTab('login');
+    }
+}
+
+function closeAuthModal() {
+    const modal = document.getElementById('auth-modal');
+    if (modal) {
+        modal.classList.remove('show');
+        setTimeout(() => {
+            modal.style.display = 'none';
+        }, 300); // match CSS transition duration
+    }
+}
+
+function switchAuthTab(tab) {
+    const loginForm = document.getElementById('form-login');
+    const registerForm = document.getElementById('form-register');
+    const loginBtn = document.getElementById('tab-login');
+    const registerBtn = document.getElementById('tab-register');
+
+    if (tab === 'login') {
+        loginForm.style.display = 'flex';
+        registerForm.style.display = 'none';
+        loginBtn.classList.add('active');
+        registerBtn.classList.remove('active');
+    } else {
+        loginForm.style.display = 'none';
+        registerForm.style.display = 'flex';
+        loginBtn.classList.remove('active');
+        registerBtn.classList.add('active');
+    }
+}
+
+// Close Auth Modal when clicking outside the white card area
+document.addEventListener('click', (e) => {
+    const modal = document.getElementById('auth-modal');
+    if (modal && e.target === modal) {
+        closeAuthModal();
+    }
+});/**
  * Kelas Riset Modal Logic
  */
 function openKelasRisetModal(serviceTitle) {
@@ -899,3 +951,52 @@ function showToast(title, message, type = "success") {
         }, 400); // Wait for transition
     }, 3000);
 }
+
+/**
+ * Mentor Slider Functionality
+ */
+document.addEventListener('DOMContentLoaded', () => {
+    const mentorSlider = document.getElementById('mentor-slider');
+    const mentorPrevBtn = document.getElementById('mentor-prev');
+    const mentorNextBtn = document.getElementById('mentor-next');
+
+    if (mentorSlider && mentorPrevBtn && mentorNextBtn) {
+        // Scroll amount is roughly the width of one card + gap
+        const scrollAmount = 332; 
+
+        mentorPrevBtn.addEventListener('click', () => {
+            mentorSlider.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+        });
+
+        mentorNextBtn.addEventListener('click', () => {
+            mentorSlider.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+        });
+        
+        // Filter button interactions
+        const filterBtns = document.querySelectorAll('.mentor-filters .filter-btn');
+        const mentorCards = document.querySelectorAll('.mentor-card');
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const filterValue = btn.getAttribute('data-filter');
+
+                // Update active class
+                filterBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+
+                // Filter cards
+                mentorCards.forEach(card => {
+                    const categories = card.getAttribute('data-category');
+                    if (categories && categories.includes(filterValue)) {
+                        card.style.display = 'flex';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+
+                // Scroll back to start on filter change as a UX detail
+                mentorSlider.scrollTo({ left: 0, behavior: 'smooth' });
+            });
+        });
+    }
+});

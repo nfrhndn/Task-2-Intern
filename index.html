@@ -37,10 +37,12 @@
         <ul class="nav-menu" id="nav-menu">
           <li><a href="#home" class="active">Home</a></li>
           <li><a href="#courses">Layanan</a></li>
+          <li><a href="#about">Tentang Kami</a></li>
+          <li><a href="#career">Karir</a></li>
           <li><a href="#contact">Kontak Kami</a></li>
           <li class="nav-icons-wrapper">
             <div class="nav-icons">
-              <a href="https://api.whatsapp.com/send?phone=6287785330349" target="_blank" class="btn btn-primary btn-pill btn-sm">Mulai Konsultasi <i class="fas fa-arrow-right"></i></a>
+              <button class="btn btn-primary btn-pill btn-sm" onclick="openAuthModal()" style="font-weight: 600; padding: 0.5rem 1.2rem;">Masuk</button>
               <div class="icon-wrapper" onclick="toggleNavDropdown('wishlist-dropdown')">
                 <i class="fa-regular fa-heart"></i>
                 <span class="badge" id="wishlist-badge">0</span>
@@ -138,27 +140,30 @@
 
     <!-- CLIENTS & MITRA SECTION (INFINITE MARQUEE) -->
     <section class="clients-section">
-      <div class="container text-center">
-        <h2 class="clients-title">Dipilih Puluhan Ribu Mahasiswa & Peneliti dari Berbagai Institusi</h2>
-        <p class="clients-subtitle">Dari S1-S3 hingga profesional, Educativa jadi partner riset end-to-end</p>
+      <div class="container">
+        <div style="display: flex; flex-direction: column; align-items: center; text-align: center; margin-bottom: 2rem;">
+          <span class="badge-mint">Klien & Mitra</span>
+          <h2 class="clients-title" style="margin-bottom: 0.5rem;">Dipilih Puluhan Ribu Mahasiswa & Peneliti dari Berbagai Institusi</h2>
+          <p class="clients-subtitle" style="margin-bottom: 0;">Dari S1-S3 hingga profesional, Educativa jadi partner riset end-to-end</p>
+        </div>
         
         <div class="marquee-container">
           <div class="marquee-track">
             <!-- SET 1 -->
-            <img src="https://educativa.id/wp-content/uploads/2026/02/UGM.png" alt="UGM">
-            <img src="https://educativa.id/wp-content/uploads/2026/02/UNY.png" alt="UNY">
-            <img src="https://educativa.id/wp-content/uploads/2026/02/UI.png" alt="UI">
-            <img src="https://educativa.id/wp-content/uploads/2026/02/ITB.png" alt="ITB">
-            <img src="https://educativa.id/wp-content/uploads/2026/02/BRIN.png" alt="BRIN">
-            <img src="https://educativa.id/wp-content/uploads/2026/02/BPS.png" alt="BPS">
+            <img src="assets/img/Logo_UGM.png" alt="UGM">
+            <img src="assets/img/Logo_UNY.png" alt="UNY">
+            <img src="assets/img/Logo_UI.png" alt="UI">
+            <img src="assets/img/Logo_ITB.png" alt="ITB">
+            <img src="assets/img/Logo_BRIN.png" alt="BRIN">
+            <img src="assets/img/Logo_BPS.png" alt="BPS">
 
             <!-- SET 2 -->
-            <img src="https://educativa.id/wp-content/uploads/2026/02/UGM.png" alt="UGM">
-            <img src="https://educativa.id/wp-content/uploads/2026/02/UNY.png" alt="UNY">
-            <img src="https://educativa.id/wp-content/uploads/2026/02/UI.png" alt="UI">
-            <img src="https://educativa.id/wp-content/uploads/2026/02/ITB.png" alt="ITB">
-            <img src="https://educativa.id/wp-content/uploads/2026/02/BRIN.png" alt="BRIN">
-            <img src="https://educativa.id/wp-content/uploads/2026/02/BPS.png" alt="BPS">
+            <img src="assets/img/Logo_UGM.png" alt="UGM">
+            <img src="assets/img/Logo_UNY.png" alt="UNY">
+            <img src="assets/img/Logo_UI.png" alt="UI">
+            <img src="assets/img/Logo_ITB.png" alt="ITB">
+            <img src="assets/img/Logo_BRIN.png" alt="BRIN">
+            <img src="assets/img/Logo_BPS.png" alt="BPS">
           </div>
         </div>
       </div>
@@ -167,7 +172,8 @@
     <!-- INTEGRATED SERVICES SLIDER SECTION -->
     <section class="services-slider-section" id="courses">
         <div class="container">
-            <div class="section-header">
+            <div class="section-header" style="display: flex; flex-direction: column; align-items: center; text-align: center;">
+                <span class="badge-mint">Layanan</span>
                 <h2>Pilih Layanan Sesuai Kebutuhanmu</h2>
                 <div class="divider-wave"></div>
                 <p style="margin-top: 1rem;">Harga transparan dengan jaminan 100% perlindungan garansi. Kualitas terbaik untuk menunjang penelitianmu.</p>
@@ -189,56 +195,207 @@
         </div>
     </section>
 
-    <!-- 100% GUARANTEE SERVICE SECTION -->
-    <section class="guarantee-section">
+    <!-- SUPPORTED TOOLS SECTION -->
+    <section class="tools-section">
+      <div class="container">
+        <div style="display: flex; flex-direction: column; align-items: center; text-align: center; margin-bottom: 2rem;">
+          <span class="badge-mint">Dukungan Software</span>
+          <h2 class="tools-title" style="margin-bottom: 0.5rem;">Dukungan Software & Database Riset Global</h2>
+          <p class="tools-subtitle" style="margin-bottom: 0;">Seluruh pendampingan pengolahan data hingga publikasi kami menggunakan standar perangkat lunak terlisensi dan layanan indeksasi jurnal bereputasi internasional yang diakui global.</p>
+        </div>
+        
+        <div class="tools-box">
+            <img src="assets/img/tools/spss_logo.png" alt="SPSS">
+            <img src="assets/img/tools/SmartPLS_Logo.png" alt="SmartPLS">
+            <img src="assets/img/tools/Python_logo.png" alt="Python">
+            <img src="assets/img/tools/RStudio_logo.png" alt="RStudio">
+            <img src="assets/img/tools/MATLAB_logo.png" alt="MATLAB">
+            <img src="assets/img/tools/Stata_logo.png" alt="Stata">
+            <img src="assets/img/tools/amos_logo.png" alt="AMOS">
+            <img src="assets/img/tools/lisrel_logo.png" alt="Lisrel">
+            <img src="assets/img/tools/Scopus_logo.png" alt="Scopus">
+            <img src="assets/img/tools/sinta_logo.png" alt="Sinta">
+            <img src="assets/img/tools/Garuda_logo.png" alt="Garuda">
+            <img src="assets/img/tools/GoogleScholar_logo.png" alt="Google Scholar">
+            <img src="assets/img/tools/ResearchGate_logo.png" alt="ResearchGate">
+            <img src="assets/img/tools/crosreff_logo.png" alt="Crossref">
+            <img src="assets/img/tools/ISSN_logo.png" alt="ISSN">
+            <img src="assets/img/tools/turnitin_logo.png" alt="Turnitin">
+        </div>
+      </div>
+    </section>
+
+    <!-- KONSULTAN EXPERT / MENTOR SECTION -->
+    <section class="mentor-section" id="mentors">
         <div class="container">
-            <div class="section-header">
-                <h2>100% Guarantee Service</h2>
-                <div class="divider-wave"></div>
-                <p style="margin-top: 1rem;">Educativa memberikan jaminan proteksi 100% Guarantee demi kenyamanan dan jaminan rasa aman seluruh klien kami.</p>
+            <div class="mentor-header text-center" style="display: flex; flex-direction: column; align-items: center;">
+                <span class="badge-mint">Mentor & Konsultan</span>
+                <h2>350+ Konsultan Expert dari Berbagai Bidang</h2>
+                <p>Dari dosen, peneliti, praktisi, hingga lulusan S2/S3 dari berbagai institusi ternama, siap bantu risetmu sesuai bidang dan metode yang kamu butuhkan.</p>
+                <div class="mentor-chips">
+                    <span class="chip"><i class="fas fa-graduation-cap text-navy"></i> Kampus ternama</span>
+                    <span class="chip"><i class="fas fa-medal text-yellow"></i> S2 / S3 / PhD level</span>
+                    <span class="chip"><i class="fas fa-laptop-code text-teal"></i> Expert software & metode</span>
+                </div>
             </div>
-            <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-icon"><i class="fas fa-hand-holding-usd"></i></div>
-                    <h3>Garansi Uang Kembali</h3>
-                    <p>Potensi refund dana hingga 100% jika hasil tidak sesuai dengan MoU yang disepakati di awal.</p>
+
+            <div class="mentor-controls">
+                <div class="mentor-filters">
+                    <button class="filter-btn active" data-filter="Semua">Semua</button>
+                    <button class="filter-btn" data-filter="Kuantitatif">Kuantitatif</button>
+                    <button class="filter-btn" data-filter="Kualitatif">Kualitatif</button>
+                    <button class="filter-btn" data-filter="Publikasi">Publikasi</button>
+                    <button class="filter-btn" data-filter="Statistik">Statistik</button>
+                    <button class="filter-btn" data-filter="Tugas Akhir">Tugas Akhir</button>
                 </div>
-                <div class="feature-card">
-                    <div class="feature-icon"><i class="fas fa-comments"></i></div>
-                    <h3>Konsultasi Sepuasnya</h3>
-                    <p>Bebas bertukar pikiran secara langsung (tatap muka daring) dengan konsultan tanpa batas kuota meeting.</p>
+                <div class="mentor-nav">
+                    <button class="mentor-arrow" id="mentor-prev" aria-label="Previous Mentors"><i class="fas fa-chevron-left"></i></button>
+                    <button class="mentor-arrow" id="mentor-next" aria-label="Next Mentors"><i class="fas fa-chevron-right"></i></button>
                 </div>
-                <div class="feature-card">
-                    <div class="feature-icon"><i class="fas fa-box-open"></i></div>
-                    <h3>Selesai Tepat Waktu</h3>
-                    <p>Timeline pengerjaan disiplin dan sistematis untuk pastikan project selesai sebelum deadline terlewat.</p>
+            </div>
+
+            <!-- Mentor Slider Container -->
+            <div class="mentor-slider-wrapper">
+                <div class="mentor-slider" id="mentor-slider">
+                    <!-- Mentor 1 -->
+                    <div class="mentor-card" data-category="Statistik,Kuantitatif,Semua">
+                        <div class="m-card-img">
+                            <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=400&q=80" alt="Dr. Pardomuan Robinson Sihombing">
+                        </div>
+                        <div class="m-card-body">
+                            <h3>Dr. Pardomuan Robinson Sihombing, M.Stat</h3>
+                            <div class="m-job-title"><span class="text-teal">Statistician</span> &bull; <span>BPS</span></div>
+                            <span class="m-edu-badge">S3 Statistik Terapan IPB</span>
+                            <p class="m-skills">Statistika & Sains Data, Statistika Ekonomi, SPSS, Eviews, Stata, Minitab, AMOS, Lisrel, SmartPLS, R Studio, dan lainnya.</p>
+                        </div>
+                        <div class="m-card-footer">
+                            <strong>10+ tahun pengalaman membimbing riset</strong>
+                        </div>
+                    </div>
+                    <!-- Mentor 2 -->
+                    <div class="mentor-card" data-category="Kuantitatif,Semua">
+                        <div class="m-card-img">
+                            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=400&q=80" alt="Dr. Sarlin Kusumaningrum">
+                        </div>
+                        <div class="m-card-body">
+                            <h3>Dr. Sarlin Kusumaningrum, S.P</h3>
+                            <div class="m-job-title"><span class="text-teal">Praktisi</span> &bull; <span>UGM</span></div>
+                            <span class="m-edu-badge">S3 Agronomi UGM</span>
+                            <p class="m-skills">Kuantitatif, Mixed Method, SEM-PLS, Path Analysis, RStudio, SPSS, SAS, Minitab, Eviews, Stata, Nvivo, SmartPLS, dan lainnya.</p>
+                        </div>
+                        <div class="m-card-footer">
+                            <strong>8+ tahun pengalaman membimbing riset</strong>
+                        </div>
+                    </div>
+                    <!-- Mentor 3 -->
+                    <div class="mentor-card" data-category="Kualitatif,Publikasi,Semua">
+                        <div class="m-card-img">
+                            <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=400&q=80" alt="Shiddiq Sugiono">
+                        </div>
+                        <div class="m-card-body">
+                            <h3>Shiddiq Sugiono, S.Si., M.Si</h3>
+                            <div class="m-job-title"><span class="text-teal">Peneliti</span> &bull; <span>BRIN</span></div>
+                            <span class="m-edu-badge">S2 Ilmu Komunikasi UI</span>
+                            <p class="m-skills">Kualitatif, Mixed Method, AI & Teknologi, Society 5.0, SPSS, Python, Nvivo, dan Publikasi Internasional.</p>
+                        </div>
+                        <div class="m-card-footer">
+                            <strong>5+ tahun pengalaman membimbing riset</strong>
+                        </div>
+                    </div>
+                    <!-- Mentor 4 -->
+                    <div class="mentor-card" data-category="Statistik,Kuantitatif,Semua">
+                        <div class="m-card-img">
+                            <img src="https://images.unsplash.com/photo-1557862921-37829c790f19?auto=format&fit=crop&w=400&q=80" alt="Cahya Alkahfi">
+                        </div>
+                        <div class="m-card-body">
+                            <h3>Cahya Alkahfi, S.Si., M.Si</h3>
+                            <div class="m-job-title"><span class="text-teal">Data Engineer</span> &bull; <span>BPS</span></div>
+                            <span class="m-edu-badge">S3 Statistik Terapan IPB</span>
+                            <p class="m-skills">Data Engineering, Quantitative Research, Statistical Analysis, Machine Learning, Deep Learning, RStudio, Python, JASP, Jupyter, dll.</p>
+                        </div>
+                        <div class="m-card-footer">
+                            <strong>10+ tahun pengalaman data analysis</strong>
+                        </div>
+                    </div>
+                    <!-- Mentor 5 -->
+                    <div class="mentor-card" data-category="Publikasi,Semua">
+                        <div class="m-card-img">
+                            <img src="https://images.unsplash.com/photo-1537511446984-935f663eb1f4?auto=format&fit=crop&w=400&q=80" alt="Prof. Dr. Andi Budianto">
+                        </div>
+                        <div class="m-card-body">
+                            <h3>Prof. Dr. Andi Budianto</h3>
+                            <div class="m-job-title"><span class="text-teal">Dosen Penilai</span> &bull; <span>Universitas Diponegoro</span></div>
+                            <span class="m-edu-badge">S3 Ilmu Publikasi</span>
+                            <p class="m-skills">Jurnal Internasional Berkualitas, Proofreading Artikel, Scopus Q1-Q4, SINTA, Referensi dan Mendeley, dll.</p>
+                        </div>
+                        <div class="m-card-footer">
+                            <strong>15+ tahun pengalaman riset ilmiah</strong>
+                        </div>
+                    </div>
+                    <!-- Mentor 6 -->
+                    <div class="mentor-card" data-category="Tugas Akhir,Kualitatif,Semua">
+                        <div class="m-card-img">
+                            <img src="https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=400&q=80" alt="M. Reza Fahlevi">
+                        </div>
+                        <div class="m-card-body">
+                            <h3>M. Reza Fahlevi, M.Pd</h3>
+                            <div class="m-job-title"><span class="text-teal">Pendamping Riset</span> &bull; <span>Konsultan Independen</span></div>
+                            <span class="m-edu-badge">S2 Pendidikan Dasar</span>
+                            <p class="m-skills">Skripsi, Tesis, PTK, Metodologi Kualitatif, Wawancara Mendalam, Observasi Kasus, dan Olah Data Edukasi.</p>
+                        </div>
+                        <div class="m-card-footer">
+                            <strong>6+ tahun mendampingi mahasiswa</strong>
+                        </div>
+                    </div>
+                    <!-- Mentor 7 -->
+                    <div class="mentor-card" data-category="Statistik,Kuantitatif,Semua">
+                        <div class="m-card-img">
+                            <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=400&q=80" alt="Sarah Wulandari">
+                        </div>
+                        <div class="m-card-body">
+                            <h3>Sarah Wulandari, M.Si</h3>
+                            <div class="m-job-title"><span class="text-teal">Data Scientist</span> &bull; <span>Tech Startup</span></div>
+                            <span class="m-edu-badge">S2 Ilmu Kelautan IPB</span>
+                            <p class="m-skills">Python, RStudio, PowerBI, Tableau, Regresi Berganda, ANOVA, Data Cleaning, dan Visualisasi Data.</p>
+                        </div>
+                        <div class="m-card-footer">
+                            <strong>4+ tahun mengolah data saintifik</strong>
+                        </div>
+                    </div>
+                    <!-- Mentor 8 -->
+                    <div class="mentor-card" data-category="Kualitatif,Tugas Akhir,Semua">
+                        <div class="m-card-img">
+                            <img src="https://images.unsplash.com/photo-1598550874175-4d0ef436c909?auto=format&fit=crop&w=400&q=80" alt="Ir. Nisa Lestari">
+                        </div>
+                        <div class="m-card-body">
+                            <h3>Ir. Nisa Lestari, M.A</h3>
+                            <div class="m-job-title"><span class="text-teal">Peneliti Etnografi</span> &bull; <span>LSM Sosial</span></div>
+                            <span class="m-edu-badge">S2 Antropologi UGM</span>
+                            <p class="m-skills">Penelitian Sosial, NVivo 12, Grounded Theory, Etnografi Komunitas, Studi Kasus, dan FGD Analysis.</p>
+                        </div>
+                        <div class="m-card-footer">
+                            <strong>8+ tahun memimpin FGD dan observasi</strong>
+                        </div>
+                    </div>
                 </div>
-                <div class="feature-card">
-                    <div class="feature-icon"><i class="fas fa-user-friends"></i></div>
-                    <h3>Bebas Ganti Konsultan</h3>
-                    <p>Fasilitas ganti pendamping secara gratis bila dirasa tidak cocok demi menjaga kenyamanan maksimal.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon"><i class="fas fa-clipboard-check"></i></div>
-                    <h3>Garansi Revisi Tuntas</h3>
-                    <p>Seluruh paket bimbingan include perbaikan (revisi) minor maupun mayor tanpa tambahan biaya.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon"><i class="fas fa-shield-alt"></i></div>
-                    <h3>Privacy & Keamanan Data</h3>
-                    <p>Seluruh dokumen penelitian dijaga ketat kerahasiaannya dan tidak akan pernah dipublikasi sepihak.</p>
-                </div>
+            </div>
+
+            <div class="mentor-footer text-center" style="margin-top: 3rem; display: flex; flex-direction: column; align-items: center;">
+                <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 0;">Didukung 350+ Konsultan Expert lainnya dari berbagai bidang keilmuan.</p>
+                <a href="#contact" class="btn btn-primary btn-pill" style="margin-top: 1.5rem;">Lihat Semua Konsultan</a>
             </div>
         </div>
     </section>
+
+
 
     <!-- TESTIMONIALS SECTION (REDESIGN: 2 COLUMNS, INFINITE VERTICAL SCROLL) -->
     <section class="testimonials-section" id="testimonials">
         <div class="container testimonials-container">
             <!-- Left Side / Header Area -->
             <div class="testimonials-left">
-                <span class="badge-testimoni">Testimoni</span>
-                <h2 class="testimoni-title">Apa Kata Mereka yang <span class="text-teal">Telah Terbantu</span></h2>
+                <span class="badge-mint">Testimoni</span>
+                <h2 class="testimoni-title">Apa Kata Mereka yang Telah Terbantu</h2>
                 <a href="#contact" class="btn btn-primary btn-pill mt-2">Kontak Kami</a>
             </div>
             
@@ -432,6 +589,51 @@
     </section>
 
     
+    <!-- 100% GUARANTEE SERVICE SECTION -->
+    <section class="guarantee-section" id="guarantee">
+        <div class="container">
+            <div class="section-header" style="display: flex; flex-direction: column; align-items: center; text-align: center;">
+                <span class="badge-mint">Garansi Kami</span>
+                <h2>100% Guarantee Service</h2>
+                <div class="divider-wave"></div>
+                <p style="margin-top: 1rem;">Educativa memberikan jaminan proteksi 100% Guarantee demi kenyamanan dan jaminan rasa aman seluruh klien kami.</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-hand-holding-usd"></i></div>
+                    <h3>Garansi Uang Kembali</h3>
+                    <p>Potensi refund dana hingga 100% jika hasil tidak sesuai dengan MoU yang disepakati di awal.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-comments"></i></div>
+                    <h3>Konsultasi Sepuasnya</h3>
+                    <p>Bebas bertukar pikiran secara langsung (tatap muka daring) dengan konsultan tanpa batas kuota meeting.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-box-open"></i></div>
+                    <h3>Selesai Tepat Waktu</h3>
+                    <p>Timeline pengerjaan disiplin dan sistematis untuk pastikan project selesai sebelum deadline terlewat.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-user-friends"></i></div>
+                    <h3>Bebas Ganti Konsultan</h3>
+                    <p>Fasilitas ganti pendamping secara gratis bila dirasa tidak cocok demi menjaga kenyamanan maksimal.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-clipboard-check"></i></div>
+                    <h3>Garansi Revisi Tuntas</h3>
+                    <p>Seluruh paket bimbingan include perbaikan (revisi) minor maupun mayor tanpa tambahan biaya.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-shield-alt"></i></div>
+                    <h3>Privacy & Keamanan Data</h3>
+                    <p>Seluruh dokumen penelitian dijaga ketat kerahasiaannya dan tidak akan pernah dipublikasi sepihak.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
 
     <!-- PROMO MODAL -->
     <div class="modal-overlay" id="promo-modal">
@@ -543,6 +745,62 @@
 
     <!-- TOAST CONTAINER -->
     <div id="toast-container" class="toast-container"></div>
+
+    <!-- AUTH MODAL (LOGIN & REGISTER) -->
+    <div class="auth-modal-overlay" id="auth-modal" style="display: none;">
+      <div class="auth-card">
+        <button class="auth-close-btn" onclick="closeAuthModal()" aria-label="Tutup">
+          <i class="fas fa-times"></i>
+        </button>
+        
+        <div class="auth-header text-center">
+          <img src="assets/Logo-Educativa.png" alt="Educativa Logo" class="auth-logo">
+          <h2>Selamat Datang!</h2>
+          <p>Silakan masuk atau daftar untuk melanjutkan.</p>
+        </div>
+
+        <div class="auth-tabs">
+          <button class="auth-tab-btn active" id="tab-login" onclick="switchAuthTab('login')">Masuk</button>
+          <button class="auth-tab-btn" id="tab-register" onclick="switchAuthTab('register')">Daftar</button>
+        </div>
+
+        <!-- FORM LOGIN -->
+        <form class="auth-form" id="form-login" onsubmit="event.preventDefault(); alert('Login berhasil (Demo)!'); closeAuthModal();">
+          <div class="form-group">
+            <label for="login-email">Email</label>
+            <input type="email" id="login-email" placeholder="Masukkan email Anda" required>
+          </div>
+          <div class="form-group">
+            <label for="login-password">Password</label>
+            <input type="password" id="login-password" placeholder="Masukkan password" required>
+          </div>
+          <div class="form-options">
+            <label class="remember-me">
+              <input type="checkbox"> Ingat saya
+            </label>
+            <a href="#" class="forgot-password">Lupa Password?</a>
+          </div>
+          <button type="submit" class="btn btn-primary" style="width: 100%; border-radius: 999px; font-weight: 700; padding: 0.8rem;">Masuk Sekarang</button>
+        </form>
+
+        <!-- FORM DAFTAR -->
+        <form class="auth-form" id="form-register" style="display: none;" onsubmit="event.preventDefault(); alert('Pendaftaran berhasil (Demo)! Silakan login.'); switchAuthTab('login');">
+          <div class="form-group">
+            <label for="reg-name">Nama Lengkap</label>
+            <input type="text" id="reg-name" placeholder="John Doe" required>
+          </div>
+          <div class="form-group">
+            <label for="reg-email">Email</label>
+            <input type="email" id="reg-email" placeholder="johndoe@email.com" required>
+          </div>
+          <div class="form-group">
+            <label for="reg-password">Password</label>
+            <input type="password" id="reg-password" placeholder="Buat password baru" minlength="6" required>
+          </div>
+          <button type="submit" class="btn btn-primary" style="width: 100%; border-radius: 999px; font-weight: 700; padding: 0.8rem;">Daftar Akun</button>
+        </form>
+      </div>
+    </div>
 
     <!-- MAIN SCRIPT -->
     <script src="script.js"></script>
