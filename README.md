@@ -1,6 +1,6 @@
-# Task 1 Intern - Redesign Website Educativa 🚀
+# Task 2 Intern - Redesign Website Educativa 🚀
 
-Proyek ini adalah penugasan magang untuk **Tugas 1 (Task 1) - Frontend Developer Intern** pada ekosistem Educativa.id. Seluruh pengerjaan berfokus pada redesign UI/UX (_landing page_) menggunakan identitas visual resmi, manipulasi DOM mentah (_Vanilla_), dan peningkatan desain responsif berskala industri.
+Proyek ini adalah penugasan magang untuk **Task 2 - Frontend Developer Intern** pada ekosistem Educativa.id. Seluruh pengerjaan berfokus pada redesign UI/UX (_landing page_) menggunakan identitas visual resmi, manipulasi DOM mentah (_Vanilla_), dan peningkatan desain responsif berskala industri.
 
 ## 📸 Tampilan Hasil Translasi Desain
 
